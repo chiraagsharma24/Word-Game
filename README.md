@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Word Puzzle Game
+
+A beautiful daily word guessing game built with Next.js, TypeScript, and Tailwind CSS. Challenge yourself to guess the daily 5-letter word within 6 attempts.
+
+## Features
+
+- 🎮 Daily word challenges with a new word each day
+- 💡 Hint system with up to 3 daily hints
+- 📊 Statistics tracking for wins, streaks, and guess distribution
+- 🌓 Dark mode and light mode support
+- 📱 Responsive design for all devices
+- 🎯 Keyboard and mouse input support
+- 🔄 Automatic game state saving with localStorage
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: Shadcn UI
+- **Theme**: next-themes for dark/light mode
+- **Notifications**: Sonner for toast notifications
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +41,29 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Play
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Try to guess the daily 5-letter word in six tries
+2. Each guess must be a valid 5-letter word
+3. After each guess, the color of the tiles will change to show how close your guess was:
+   - 🟩 Green: Letter is in the correct spot
+   - 🟨 Yellow: Letter is in the word but in the wrong spot
+   - ⬜ Gray: Letter is not in the word
+4. A new puzzle is available each day
+5. You can use up to 3 hints per day if you're stuck
 
-## Learn More
+## Gameplay
 
-To learn more about Next.js, take a look at the following resources:
+- Type a 5-letter word and press ENTER to submit
+- Use the onscreen keyboard or your physical keyboard
+- View your statistics by clicking the 📊 icon
+- Switch between light and dark mode with the theme toggle
+- Access game rules by clicking the ❓ icon
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](https://choosealicense.com/licenses/mit/)
