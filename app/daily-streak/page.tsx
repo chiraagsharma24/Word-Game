@@ -8,6 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { MoonIcon, SunIcon, Flame, CalendarDays, Clock, Trophy } from "lucide-react";
 import { useTheme } from "next-themes";
 
+
+
 // Theme toggle component
 const ThemeToggle = () => {
   const { setTheme, theme } = useTheme();
@@ -25,6 +27,8 @@ const ThemeToggle = () => {
     </Button>
   );
 };
+
+
 
 interface StreakData {
   currentStreak: number;
@@ -47,6 +51,8 @@ export default function DailyStreak() {
     lastPlayed: '',
     streakHistory: []
   });
+
+
 
   useEffect(() => {
     // In a real app, this would fetch from an API or local storage
@@ -90,6 +96,8 @@ export default function DailyStreak() {
   const getDayOfWeek = (dateStr: string) => {
     return new Date(dateStr).getDay();
   };
+
+
 
   return (
     <main className="min-h-screen bg-background">
@@ -255,6 +263,7 @@ export default function DailyStreak() {
       </div>
       
       <Footer />
+
     </main>
   );
 } 
